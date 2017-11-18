@@ -1,6 +1,9 @@
 
 var delay = 19000;
 var storage = typeof window.opera === "object" ? widget.preferences : localStorage;
+var send_message = function (message) {
+    typeof window.opera === "object" ? opera.extension.postMessage(message) : browser.runtime.sendMessage(message);
+}
 var timerstatus = false;
 
 window.addEventListener("load",
@@ -70,5 +73,6 @@ function onFormSubmit(event) {
             storage["stop_time"] = 0;
         }
 
+        send_message(status);
     }
 }
