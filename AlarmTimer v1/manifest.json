@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Alarm Timer",
+  "version": "1.0.4",
+  "description": "Countdown timer with alarm notification.",
+  "icons": {
+    "64": "images/timer-64.png"
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo/timer-19.png",
+    "default_title": "Simplest Timer"
+  },
+  "background": {
+    "page": "index.html"
+  }
+}
